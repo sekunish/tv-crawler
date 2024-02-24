@@ -16,13 +16,16 @@ import time
 # デバッグフラグ
 DEBUG = True
 
+# 現在のディレクトリ
+CWD = os.path.abspath(os.path.dirname(__file__))
+
 # DB接続＆新規作成
-DB_FILE = pathlib.Path(os.getcwd()) / "db.sqlite3"
+DB_FILE = pathlib.Path(CWD) / "db.sqlite3"
 
 # テーブル作成
-DDL_FILE = pathlib.Path(os.getcwd()) / "sql" / "ddl.sql"
+DDL_FILE = pathlib.Path(CWD) / "sql" / "ddl.sql"
 # 出力先
-OUT = pathlib.Path(os.getcwd()) / "out"
+OUT = pathlib.Path(CWD) / "out"
 
 # 検索URL
 SEARH_URL = "https://tver.jp/search/{keywords}"
